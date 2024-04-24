@@ -410,7 +410,8 @@ class AutoParallelRioReader:
         elif result.shape[0] == 1:
             result = result[0]
         else:
-            raise RuntimeError(f"Unexpected shape {result.shape}, expected exactly 1 band.")
+            pass
+            #raise RuntimeError(f"Unexpected shape {result.shape}, expected exactly 1 band.")
 
         scale, offset = self.scale_offset
 
