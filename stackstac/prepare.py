@@ -409,6 +409,7 @@ def to_coords(
         [item["properties"]["datetime"] for item in items],
         infer_datetime_format=True,
         errors="coerce",
+        format="ISO8601",
     )
     if times.tz is not None:
         # xarray can't handle tz-aware DatetimeIndexes, so we convert to UTC and drop the timezone
